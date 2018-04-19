@@ -1,0 +1,19 @@
+# frozen_string_literal: true
+
+require 'rack/proxy'
+
+module Infrastructure
+  class ApiProxy < Rack::Proxy
+    def perform_request(env)
+      request = Rack::Request.new(env)
+      if request.path.match?(%r{^\/api})
+        puts request
+        env['HTTP_HOST'] = ENV.fetch('API_HOST', 'localhost:3001')
+        env['REQUEST_PATH'].sub!(%r{^\/api}, '')
+        super(env)
+      else
+        @app.call(env)
+      end
+    end
+  end
+end
