@@ -8,7 +8,7 @@ module Infrastructure
       request = Rack::Request.new(env)
       if request.path.match?(%r{^\/api})
         puts request
-        env['HTTP_HOST'] = ENV.fetch('API_HOST', 'localhost:3001')
+        env['HTTP_HOST'] = ENV.fetch('API_HOST', 'localhost:8080')
         env['REQUEST_PATH'].sub!(%r{^\/api}, '')
         super(env)
       else

@@ -1,0 +1,12 @@
+{
+  "name": "y",
+  "version": "0.1.0",
+  "description": "Dummy JSON API implementation",
+  "main": "index.js",
+  "author": "Danny Eck <danny.eck@osi.ca.gov>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "restify": "^7.1.1"
+  }
+}
