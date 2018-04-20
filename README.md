@@ -1,5 +1,7 @@
 # README
 
+![Alt text](.github/proxy-in-action.gif?raw=true "Demo")
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
