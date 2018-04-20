@@ -24,5 +24,8 @@ module CansApp
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    require 'infrastructure/api_proxy'
+    config.middleware.use Infrastructure::ApiProxy, {ssl_verify_none: true}
   end
 end

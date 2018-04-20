@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+node dummy-services/index.js
